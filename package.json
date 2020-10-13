@@ -1,0 +1,32 @@
+{
+  "name": "ehpi",
+  "version": "0.1.0",
+  "description": "ehpi - Enhanced HTTP Proxy Implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexagod/ehpi.git"
+  },
+  "keywords": [
+    "proxy", "http", "server"
+  ],
+  "author": "Pranshu Srivastava <rexagod@gmail.com>",
+  "contributors": [
+	"Daman Raaj", "Arjit Srivastava"
+  ],
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/rexagod/ehpi/issues"
+  },
+  "homepage": "https://github.com/rexagod/ehpi#readme",
+  "dependencies": {
+    "debug": "^4.1.1"
+  },
+  "engines" : {
+	"node": "^10.19.0",
+	"npm": "^6.14.4"
+  }
+}
