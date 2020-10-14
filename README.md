@@ -2,7 +2,17 @@
 
 ![testing](./assets/test.png)
 
-HTML-rendered documentation can be found [here](https://rexagod.github.io/ehpi/).
+**`ehpi` supports both forward and reverse proxying types.**
+
+### Forward Proxy Flow
+
+![forward-proxy-flow](./assets/fpf.svg)
+
+### Reverse Proxy Flow
+
+![reverse-proxy-flow](./assets/rpf.svg)
+
+**HTML-rendered documentation can be found [here](https://rexagod.github.io/ehpi/).**
 
 ## API
 
