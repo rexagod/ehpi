@@ -4,18 +4,26 @@
   "description": "ehpi - Enhanced HTTP Proxy Implementation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ehpi": "DEBUG=ehpi node test/test.js",
+	"html": "node_modules/.bin/documentation build index.js -f html -o web",
+	"live": "node_modules/.bin/live-server",
+    "md": "node_modules/.bin/documentation readme index.js --section=API",
+    "serve": "node_modules/.bin/documentation serve index.js",
+    "svg": "node_modules/.bin/js2flowchart lib/ehpi.js && mv lib/ehpi.js.svg assets/ehpi.svg"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rexagod/ehpi.git"
   },
   "keywords": [
-    "proxy", "http", "server"
+    "proxy",
+    "http",
+    "server"
   ],
   "author": "Pranshu Srivastava <rexagod@gmail.com>",
   "contributors": [
-	"Daman Raaj", "Arjit Srivastava"
+    "Daman Raaj",
+    "Arjit Srivastava"
   ],
   "license": "GPLv3",
   "bugs": {
@@ -26,8 +34,13 @@
     "debug": "^4.1.1"
   },
   "private": true,
-  "engines" : {
-	"node": "^10.19.0",
-	"npm": "^6.14.4"
+  "engines": {
+    "node": "^10.19.0",
+    "npm": "^6.14.4"
+  },
+  "devDependencies": {
+    "documentation": "^13.0.2",
+    "js2flowchart": "^1.3.2",
+    "live-server": "^1.2.1"
   }
 }
