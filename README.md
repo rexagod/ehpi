@@ -1,5 +1,7 @@
 # ehpi - Enhanced HTTP Proxy Implementation
 
+![testing](./assets/test.png)
+
 HTML-rendered documentation can be found [here](https://rexagod.github.io/ehpi/).
 
 ## API
