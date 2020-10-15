@@ -25,6 +25,7 @@
 -   [http](#http)
 -   [net](#net)
 -   [url](#url)
+-   [Cache](#cache)
 -   [ehpiConsole](#ehpiconsole)
 -   [ehpi](#ehpi)
     -   [Parameters](#parameters)
@@ -67,6 +68,10 @@ Used to access internal Socket APIs.
 ### url
 
 Used to parse host information.
+
+### Cache
+
+Used for caching response stream from the target.
 
 ### ehpiConsole
 
