@@ -1,3 +1,5 @@
 *.swp
 *-lock.*
+.devcontainer
 node_modules/
+
