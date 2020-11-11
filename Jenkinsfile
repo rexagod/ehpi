@@ -1,7 +1,13 @@
 pipeline {
 	agent any
+	options {
+		timestamps()
+	}
+	tools {
+		node 'Node10'
+	}
 	environment {
-		PATH = "${tool 'Node10'}/bin:${PATH}"
+		PATH = "${node}/bin:${PATH}"
 	}
 	stages {
 		stage('Build') {
@@ -32,5 +38,8 @@ pipeline {
 				echo 'DEPLOY STAGE COMPLETE'
 			}
 		}
+	}
+	post {
+		echo 'FINISHED'
 	}
 }
