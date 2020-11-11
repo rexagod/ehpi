@@ -1,9 +1,9 @@
 pipeline {
 	agent any
-	
-	git url: 'https://github.com/rexagod/ehpi.git'
-	def node = tool 'Node10'
-	env.PATH = "${node}/bin/npm:${env.PATH}"
+	checkout scm
+	environment {
+		PATH = "${tool 'Node10'}/bin/npm:${PATH}"
+	}
 	stages {
 		stage('Build') {
 			steps {
