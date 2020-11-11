@@ -4,7 +4,7 @@ pipeline {
 		timestamps()
 	}
 	tools {
-		jenkins.plugins.nodejs.tools.NodeJSInstallation 'Node10'
+		nodejs 'Node10'
 	}
 	stages {
 		stage('Build') {
