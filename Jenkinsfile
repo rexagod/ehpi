@@ -1,6 +1,5 @@
 pipeline {
 	agent any
-	checkout scm
 	environment {
 		PATH = "${tool 'Node10'}/bin/npm:${PATH}"
 	}
