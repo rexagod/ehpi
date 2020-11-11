@@ -4,10 +4,7 @@ pipeline {
 		timestamps()
 	}
 	tools {
-		nodejs 'Node10'
-	}
-	environment {
-		PATH = "${nodejs}/bin:${PATH}"
+		jenkins.plugins.nodejs.tools.NodeJSInstallation 'Node10'
 	}
 	stages {
 		stage('Build') {
