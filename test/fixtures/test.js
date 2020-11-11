@@ -7,9 +7,12 @@ const mproxy = new ehpi();
 describe('ehpi', () => {
 	describe('prototype', () => {
 		const fns = Object.keys(mproxy);
-		
-		it('has utility functions defined', () => {
-			 assert(fns.filter(el=>el[0]=='_').length > 0);
+		it('was successfully instantiated', () => {
+			assert(fns.length);
+		});
+		it('has handlers defined', () => {
+			 assert(fns.filter(el=>el.startsWith('on')).length);
 		});
 	})
 });
+
