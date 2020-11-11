@@ -4,10 +4,10 @@ pipeline {
 		timestamps()
 	}
 	tools {
-		node 'Node10'
+		nodejs 'Node10'
 	}
 	environment {
-		PATH = "${node}/bin:${PATH}"
+		PATH = "${nodejs}/bin:${PATH}"
 	}
 	stages {
 		stage('Build') {
@@ -40,6 +40,11 @@ pipeline {
 		}
 	}
 	post {
-		echo 'FINISHED'
+		success {
+				echo 'ALL STAGES WERE SUCCESSFUL'
+		}
+		failure {
+				echo 'PIPELINE FAILED'
+		}
 	}
 }
