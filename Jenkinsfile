@@ -10,7 +10,7 @@ pipeline {
 		stage('Build') {
 			steps {
 				echo 'BUILD STAGE STARTED'
-				node -v
+				node '-v'
 				npm 'run svg'
 				echo 'BUILD STAGE COMPLETED'
 			}
