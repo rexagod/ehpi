@@ -10,7 +10,8 @@
     "live": "node_modules/.bin/live-server",
     "md": "node_modules/.bin/documentation readme index.js --section=API",
     "serve": "node_modules/.bin/documentation serve index.js",
-    "svg": "node_modules/.bin/js2flowchart lib/ehpi.js && mv lib/ehpi.js.svg assets/ehpi.svg"
+    "svg": "node_modules/.bin/js2flowchart lib/ehpi.js && mv lib/ehpi.js.svg assets/ehpi.svg",
+	"test": ""
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,7 @@
     "debug": "^4.1.1",
     "stream-cache": "0.0.2"
   },
-  "private": true,
+  "private": false,
   "engines": {
     "node": "^10.19.0",
     "npm": "^6.14.4"
