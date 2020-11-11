@@ -8,7 +8,7 @@ pipeline {
 			steps {
 				echo 'BUILD STAGE STARTED'
 				nodejs(nodeJSInstallationName: 'Node10') {
-						sh 'npm run svg'
+						sh 'npm i'
 				}
 				echo 'BUILD STAGE COMPLETED'
 			}
@@ -31,6 +31,7 @@ pipeline {
 			steps {
 				echo 'DEPLOY STAGE STARTED'
 				nodejs(nodeJSInstallationName: 'Node10') {
+						sh 'npm run svg'
 						sh 'npm run md'
 						sh 'npm run html'
 				}
