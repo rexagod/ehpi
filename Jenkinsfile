@@ -7,14 +7,14 @@ pipeline {
 		stage('Build') {
 			steps {
 				echo 'BUILD STAGE STARTED'
-				npm run svg
+				npm 'run svg'
 				echo 'BUILD STAGE COMPLETED'
 			}
 		}
 		stage('Test') {
 			steps {
 				echo 'TEST STAGE STARTED'
-				npm run test 
+				npm 'run test' 
 				echo 'TEST STAGE COMPLETE'
 			}
 		}
@@ -27,8 +27,8 @@ pipeline {
 			steps {
 				// deploy artifacts to `gh-pages` branch
 				echo 'DEPLOY STAGE STARTED'
-				npm run md
-				npm run html
+				npm 'run md'
+				npm 'run html'
 				echo 'DEPLOY STAGE COMPLETE'
 			}
 		}
