@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-		PATH = "${tool 'Node10'}/bin/npm:${PATH}"
+		PATH = "${tool 'Node10'}/bin:${PATH}"
 	}
 	stages {
 		stage('Build') {
