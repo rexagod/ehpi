@@ -3,22 +3,22 @@ pipeline {
 	options {
 		timestamps()
 	}
-	tools {
-		nodejs 'Node10'
-	}
 	stages {
 		stage('Build') {
 			steps {
 				echo 'BUILD STAGE STARTED'
-				node '-v'
-				npm 'run svg'
+				nodejs(nodeJSInstallationName: 'Node10') {
+						sh 'npm run svg'
+				}
 				echo 'BUILD STAGE COMPLETED'
 			}
 		}
 		stage('Test') {
 			steps {
 				echo 'TEST STAGE STARTED'
-				npm 'run test' 
+				nodejs(nodeJSInstallationName: 'Node10') {
+						sh 'npm run test' 
+				}
 				echo 'TEST STAGE COMPLETE'
 			}
 		}
@@ -29,10 +29,11 @@ pipeline {
 				}
 			}
 			steps {
-				// deploy artifacts to `gh-pages` branch
 				echo 'DEPLOY STAGE STARTED'
-				npm 'run md'
-				npm 'run html'
+				nodejs(nodeJSInstallationName: 'Node10') {
+						sh 'npm run md'
+						sh 'npm run html'
+				}
 				echo 'DEPLOY STAGE COMPLETE'
 			}
 		}
