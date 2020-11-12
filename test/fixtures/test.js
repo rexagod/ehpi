@@ -12,6 +12,13 @@ describe('ehpi', () => {
 		});
 		it('has handlers defined', () => {
 			 assert(fns.filter(el=>el.startsWith('on')).length);
+	        it('catches errors accordingly', () => {
+                         assert(fns.filter(el=>el.endsWith('Error')).length);
+                });
+                it('was successfully instantiated', () => {
+                         assert.ok(fns);
+                         assert(fns.length);
+                });
 		});
 	})
 });
