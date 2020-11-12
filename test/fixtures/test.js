@@ -5,21 +5,18 @@ const assert = require('assert');
 const mproxy = new ehpi();
 
 describe('ehpi', () => {
-	describe('prototype', () => {
-		const fns = Object.keys(mproxy);
-		it('was successfully instantiated', () => {
-			assert(fns.length);
-		});
-		it('has handlers defined', () => {
-			 assert(fns.filter(el=>el.startsWith('on')).length);
-	        it('catches errors accordingly', () => {
-                         assert(fns.filter(el=>el.endsWith('Error')).length);
-                });
-                it('was successfully instantiated', () => {
-                         assert.ok(fns);
-                         assert(fns.length);
-                });
-		});
-	})
+  describe('prototype', () => {
+    const fns = Object.keys(mproxy);
+    it('was successfully instantiated', () => {
+        assert.ok(fns);
+        assert(fns.length);
+    });
+    it('has handlers defined', () => {
+        assert(fns.filter(el=>el.startsWith('on')).length);
+    });
+    it('catches errors accordingly', () => {
+        assert(fns.filter(el=>el.endsWith('Error')).length);
+    });
+  })
 });
 
