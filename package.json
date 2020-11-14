@@ -11,7 +11,8 @@
     "md": "node_modules/.bin/documentation readme index.js --section=API",
     "serve": "node_modules/.bin/documentation serve index.js",
     "svg": "node_modules/.bin/js2flowchart lib/ehpi.js && mv lib/ehpi.js.svg assets/ehpi.svg",
-	"test": "node_modules/.bin/mocha --exit --file test/fixtures/test.js"
+    "test": "node_modules/.bin/mocha --exit --file test/fixtures/test.js",
+    "lint:fix": "eslint lib/*.js  test/**/*.js --fix"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "documentation": "^13.0.2",
+    "eslint": "^7.13.0",
     "js2flowchart": "^1.3.2",
     "live-server": "^1.2.1",
     "mocha": "^8.2.1"
