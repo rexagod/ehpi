@@ -7,6 +7,7 @@ const mproxy = new ehpi();
 describe('ehpi', () => {
   describe('prototype', () => {
     const fns = Object.keys(mproxy);
+    console.log(fns)
     it('was successfully instantiated', () => {
         assert.ok(fns);
         assert(fns.length);
