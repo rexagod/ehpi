@@ -17,6 +17,6 @@ describe('ehpi', () => {
     it('catches errors accordingly', () => {
         assert(fns.filter(el=>el.endsWith('Error')).length);
     });
-  })
+  });
 });
 
