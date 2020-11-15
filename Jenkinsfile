@@ -8,7 +8,9 @@ pipeline {
       steps {
         echo 'BUILD STAGE STARTED'
         nodejs(nodeJSInstallationName: 'Node10') {
+            sh 'npm --version'
             sh 'npm i'
+            sh 'npm run lint:fix'
         }
         echo 'BUILD STAGE COMPLETED'
       }
