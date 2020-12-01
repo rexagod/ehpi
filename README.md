@@ -87,8 +87,6 @@ Constructs an ehpi instance.
 
 #### port
 
-#### port
-
 Server's port number.
 
 #### onServerError
