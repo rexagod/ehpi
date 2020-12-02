@@ -43,7 +43,7 @@ pipeline {
   }
   post {
     success {
-        echo 'ALL STAGES WERE SUCCESSFUL'
+        echo 'PIPELINE SUCCESSFUL'
     }
     failure {
         echo 'PIPELINE FAILED'
