@@ -1,4 +1,4 @@
-# ehpi - Enhanced HTTP Proxy Implementation
+# ehpi - Enhanced Proxy Protocol Implementation
 
 ![testing](./assets/test.png)
 
